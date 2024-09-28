@@ -76,7 +76,7 @@ class DontSayFox_game():
         if not verbose: print("Auto-playing game...")
         
         while self.game_state:    
-            if auto_play:
+            if not auto_play:
                 input("Press Enter to continue...")
             
             if verbose:
@@ -100,7 +100,7 @@ class DontSayFox_game():
                 print("You made it to round ", self.turn_count)
                 self.game_state = False
             elif self.check_complete():
-                print("Game Over, You won!")
+                print("Winner winner Chicken Dinner (cause you're a fox), You won!")
                 self.game_state = False
                 if not verbose: print(self) 
             else:
